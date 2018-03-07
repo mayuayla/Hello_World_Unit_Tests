@@ -34,6 +34,9 @@ jobs:
           path: app/build/reports
           destination: reports
       - store_artifacts:
+          path: app/build/reports/tests/testDebugUnitTest/packages/
+          destination: packages/
+      - store_artifacts:
           path: app/build/outputs/apk/
           destination: apks/
       - store_test_results:
