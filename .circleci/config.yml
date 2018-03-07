@@ -29,13 +29,13 @@ jobs:
           command: ./gradlew test
       - run:
           name: Initial build
-          command: ./gradlew clean assembleRelease --no-daemon --stacktrace
+          command: ./gradlew clean assembleDebug --no-daemon --stacktrace
       - store_artifacts:
           path: app/build/reports
           destination: reports
       - store_artifacts:
-          path: app/build/reports/tests/testDebugUnitTest/packages/
-          destination: packages/
+          path: app/build/reports/tests/testDebugUnitTest/packages
+          destination: unittests/
       - store_artifacts:
           path: app/build/outputs/apk/
           destination: apks/
